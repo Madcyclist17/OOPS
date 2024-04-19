@@ -102,7 +102,7 @@ cout<<"enter the correct account no"<<endl;
 int main()
 {
 int i,acc,n;
-cout<<"enter no.of account holders"<<endl;
+cout<<"\n ----------------------"<<endl<<"enter no.of account holders"<<endl;
 cin>>n;
 Bank a[n];
 for(i=0;i<n;i++)
