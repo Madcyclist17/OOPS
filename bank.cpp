@@ -20,11 +20,13 @@ cout<<"enter the account number: "<<endl;
 cin>>acc;
 cout<<"enter the type(Saving 'S' & Current 'C') "<<endl;
 cin>>type;
-
+cout<<"enter the amount "<<endl;
+cin>>bala;
         cout<<"\n ----------------------";
         cout<<"\n Accout No. : "<<acc;
         cout<<"\n Name : "<<name;
         cout<<"\n Account Type : "<<type; 
+        cout<<"\n Balance : "<<bala; 
 	 cout<<"\n ----------------------"<<endl;
 }
 void deposite()
