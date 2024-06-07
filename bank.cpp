@@ -33,6 +33,7 @@ void deposite()
 {
 cout<<"enter the amount to deposite"<<endl;
 cin>>amount;
+total=bala;
 total=total+amount;
 bala=total;
 cout<<"the balance amount is "<<bala<<endl;
@@ -46,8 +47,9 @@ if(total<amount)
 cout<<"insufficient balance"<<endl;
 else 
 {
-	total=total-amount;
-	bala=total;
+	bala=total;	
+total=total-amount;
+bala=total;
 	cout<<"the balance amount is "<<bala<<endl;
 }
 }
@@ -128,3 +130,4 @@ a[i].display(acc);
 for(i=0;i<n;i++)
 a[i].details();
 }
+
