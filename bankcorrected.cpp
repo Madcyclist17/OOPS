@@ -110,3 +110,113 @@ int main() {
 
     return 0;
 }
+/*output:
+
+Enter number of account holders
+2
+Enter the name :
+sui
+Enter the account number: 
+123
+Enter the type(Saving 'S' & Current 'C') 
+S
+Enter the amount 
+1000
+
+ ----------------------
+ Account No. : 123
+ Name : sui
+ Account Type : S
+ Balance : 1000
+ ----------------------
+Enter the name :
+nonu
+Enter the account number: 
+234
+Enter the type(Saving 'S' & Current 'C') 
+S
+Enter the amount 
+3000
+
+ ----------------------
+ Account No. : 234
+ Name : nonu
+ Account Type : S
+ Balance : 3000
+ ----------------------
+Enter the account number (or 1 to exit): 123
+Enter the choice
+1. Deposit
+2. Withdraw
+3. Balance
+4. Details
+4
+
+ ----------------------
+ Account No. : 123
+ Name : sui
+ Account Type : S
+ Balance : 1000
+ ----------------------
+To continue press 1
+1
+Enter the choice
+1. Deposit
+2. Withdraw
+3. Balance
+4. Details
+1
+Enter the amount to deposit
+3400
+The balance amount is 4400
+To continue press 1
+5
+
+
+Enter the correct account number
+Enter the account number (or 1 to exit): 234
+Enter the correct account number
+Enter the choice
+1. Deposit
+2. Withdraw
+3. Balance
+4. Details
+4
+
+ ----------------------
+ Account No. : 234
+ Name : nonu
+ Account Type : S
+ Balance : 3000
+ ----------------------
+To continue press 1
+1
+Enter the choice
+1. Deposit
+2. Withdraw
+3. Balance
+4. Details
+2
+Enter the amount to withdraw
+500
+The balance amount is 2500
+
+To continue press 1
+5
+
+Enter the account number (or 1 to exit): 1
+
+ ----------------------
+ Account No. : 123
+ Name : sui
+ Account Type : S
+ Balance : 4400
+ ----------------------
+
+ ----------------------
+ Account No. : 234
+ Name : nonu
+ Account Type : S
+ Balance : 2500
+ ----------------------
+*/
