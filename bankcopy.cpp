@@ -96,9 +96,9 @@ int main() {
     }
 
     while (true) {
-        cout << "Enter the account number (or -1 to exit): ";
+        cout << "Enter the account number (or 1 to exit): ";
         cin >> acc;
-        if (acc == -1) break;
+        if (acc == 1) break;
         for (i = 0; i < n; i++) {
             a[i].display(acc);
         }
