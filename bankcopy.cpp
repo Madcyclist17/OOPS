@@ -1,69 +1,112 @@
 #include<iostream>
-#include<stdio.h>
-#include<string.h>
-
 using namespace std;
 
-class bank
-{
-        int acno;
-        char nm[100], acctype[100];
-        float bal;  
-   public:
-        bank(int acc_no, char *name, char *acc_type, float balance)  //Parameterized Constructor
-        {
-                acno=acc_no;
-                strcpy(nm, name);
-                strcpy(acctype, acc_type);
-                bal=balance;
+class Bank {
+private:
+    int members[3];
+    char name[35];
+    int acc;
+    int bala, total, amount, c, choice;
+    char type[1];
+
+public:
+    void read() {
+        cout << "Enter the name :" << endl;
+        cin >> name;
+        cout << "Enter the account number: " << endl;
+        cin >> acc;
+        cout << "Enter the type(Saving 'S' & Current 'C') " << endl;
+        cin >> type;
+        cout << "Enter the amount " << endl;
+        cin >> bala;
+        total = bala; // Initialize total with initial balance
+        cout << "\n ----------------------";
+        cout << "\n Account No. : " << acc;
+        cout << "\n Name : " << name;
+        cout << "\n Account Type : " << type;
+        cout << "\n Balance : " << bala;
+        cout << "\n ----------------------" << endl;
+    }
+
+    void deposite() {
+        cout << "Enter the amount to deposit" << endl;
+        cin >> amount;
+        total += amount;
+        bala = total;
+        cout << "The balance amount is " << bala << endl;
+    }
+
+    void withdraw() {
+        cout << "Enter the amount to withdraw" << endl;
+        cin >> amount;
+        if (total < amount)
+            cout << "Insufficient balance" << endl;
+        else {
+            total -= amount;
+            bala = total;
+            cout << "The balance amount is " << bala << endl;
         }
-        void deposit();
-        void withdraw();
-        void display();
+    }
+
+    void balance() {
+        cout << "The balance amount is " << total << endl;
+    }
+
+    void details() {
+        cout << "\n ----------------------";
+        cout << "\n Account No. : " << acc;
+        cout << "\n Name : " << name;
+        cout << "\n Account Type : " << type;
+        cout << "\n Balance : " << total;
+        cout << "\n ----------------------" << endl;
+    }
+
+    void display(int inputacc) {
+        if (inputacc == acc) {
+            do {
+                cout << "Enter the choice" << endl;
+                cout << "1. Deposit" << endl;
+                cout << "2. Withdraw" << endl;
+                cout << "3. Balance" << endl;
+                cout << "4. Details" << endl;
+                cin >> choice;
+                switch (choice) {
+                    case 1: deposite(); break;
+                    case 2: withdraw(); break;
+                    case 3: balance(); break;
+                    case 4: details(); break;
+                    default: cout << "Invalid choice" << endl;
+                }
+                cout << "To continue press 1" << endl;
+                cin >> c;
+            } while (c == 1);
+        } else {
+            cout << "Enter the correct account number" << endl;
+        }
+    }
 };
-void bank::deposit()   //depositing an amount
-{
-        int damt1;
-        cout<<"\n Enter Deposit Amount = ";
-        cin>>damt1;
-        bal+=damt1;
-}
-void bank::withdraw()  //withdrawing an amount
-{
-        int wamt1;
-        cout<<"\n Enter Withdraw Amount = ";
-        cin>>wamt1;
-        if(wamt1>bal)
-                cout<<"\n Cannot Withdraw Amount";
-        bal-=wamt1;
-}
-void bank::display()  //displaying the details
-{
-        cout<<"\n ----------------------";
-        cout<<"\n Accout No. : "<<acno;
-        cout<<"\n Name : "<<nm;
-        cout<<"\n Account Type : "<<acctype;
-        cout<<"\n Balance : "<<bal;  
-}
-int main()
-{
-        int acc_no;
-        char name[100], acc_type[100];
-        float balance;
-        cout<<"\n Enter Details: \n";
-        cout<<"-----------------------";
-        cout<<"\n Accout No. ";
-        cin>>acc_no;
-        cout<<"\n Name : ";
-        cin>>name;
-        cout<<"\n Account Type : ";
-        cin>>acc_type;
-        cout<<"\n Balance : ";
-        cin>>balance;
-  
-        bank b1(acc_no, name, acc_type, balance);  //object is created
-        b1.deposit(); //
-        b1.withdraw(); // calling member functions
-        b1.display(); //
-        return 0;
+
+int main() {
+    int i, acc, n;
+    cout << "\n ----------------------" << endl << "Enter number of account holders" << endl;
+    cin >> n;
+    Bank a[n];
+    for (i = 0; i < n; i++) {
+        a[i].read();
+    }
+
+    while (true) {
+        cout << "Enter the account number (or -1 to exit): ";
+        cin >> acc;
+        if (acc == -1) break;
+        for (i = 0; i < n; i++) {
+            a[i].display(acc);
+        }
+    }
+
+    for (i = 0; i < n; i++) {
+        a[i].details();
+    }
+
+    return 0;
 }
