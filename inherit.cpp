@@ -30,11 +30,13 @@ cout<<"perimeter of the rectangle="<<p<<endl;
 };
 int main(){
 Rectangle R;
-R.getdata();
 Area A;
 Perimeter P;
+A.getdata();
 A.rarea();
+P.getdata();
 P.rperimeter();
+
 return 0;
 }
-
+    
