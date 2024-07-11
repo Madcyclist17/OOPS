@@ -16,7 +16,7 @@ public:
 void rarea(){
 int a=0;
 a=l*b;
-cout<<"area of the rectangle="<<a<<endl;
+cout<<"area of the rectangle="<<a<<"cm^2"<<endl;
 }
 };
  class Perimeter:public Rectangle{
@@ -25,7 +25,7 @@ void rperimeter(){
 
 int p=0;
 p=(2*(l+b));
-cout<<"perimeter of the rectangle="<<p<<endl;
+cout<<"perimeter of the rectangle="<<p<<"cm"<<endl;
 }
 };
 int main(){
