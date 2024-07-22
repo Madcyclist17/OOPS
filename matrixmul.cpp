@@ -70,7 +70,7 @@ cout<<endl<<"the resultant matrix is";
 for(i=0;i<m;i++)
 	{
 cout<<endl;
-	for(j=0;j<p;j++)
+	for(j=0;j<q;j++)
 	{
 	cout<<setw(4)<<c[i][j];
 	}
