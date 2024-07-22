@@ -1,7 +1,7 @@
 //friend
 #include<iostream>
 using namespace std;
-class B;
+class B;//forward declaration 
 class A{ 
 int a;
 public:
