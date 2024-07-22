@@ -100,7 +100,7 @@ int main() {
         cin >> acc;
         if (acc == 1) break;
         for (i = 0; i < n; i++) {
-            a[i].display(acc);
+            a[i].display(acc);//eviden acc number pass cheyyum argument ayi
         }
     }
 
